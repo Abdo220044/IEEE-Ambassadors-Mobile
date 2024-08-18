@@ -1,0 +1,20 @@
+import 'dart:io';
+
+void main() {
+  // Ask the user for a number
+  print('Enter a number:');
+  int? number = int.tryParse(stdin.readLineSync()!);
+
+  if (number == null) {
+    print('Invalid input. Please enter an integer.');
+    return;
+  }
+
+  // Find and print all divisors of the number
+  print('Divisors of $number are:');
+  for (int i = 1; i <= number; i++) {
+    if (number % i == 0) {
+      print(i);
+    }
+  }
+}
