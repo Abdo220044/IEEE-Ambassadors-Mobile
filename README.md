@@ -1,1 +1,0 @@
-# IEEE-Ambassadors-Mobile
