@@ -1,11 +1,17 @@
-int sortDigitsDescending(int num) {
-  List<String> digits = num.toString().split('');
-  digits.sort((a, b) => b.compareTo(a));
-  return int.parse(digits.join(''));
-}
+ int descendingOrder(int number) {
 
-void main() {
-  print(sortDigitsDescending(42145)); // Output: 54421
-  print(sortDigitsDescending(145263)); // Output: 654321
-  print(sortDigitsDescending(123456789)); // Output: 987654321
+  List<int> numList = [];
+
+  while (number > 0) {
+    numList.add(number % 10);
+    number = number ~/ 10;
+  }
+  numList.sort((a, b) => b.compareTo(a));
+
+  int result = 0;
+  for (int digit in numList) {
+    result = result * 10 + digit;
+  }
+
+  return result;
 }
