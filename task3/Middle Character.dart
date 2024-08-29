@@ -1,17 +1,10 @@
 String getMiddle(String word) {
   int length = word.length;
-  int middle = length ~/ 2;
+  int mid = length ~/ 2;
 
   if (length % 2 == 0) {
-    return word.substring(middle - 1, middle + 1);
+    return word.substring(mid - 1, mid + 1);
   } else {
-    return word[middle];
+    return word[mid];
   }
-}
-
-void main() {
-  print(getMiddle("test"));
-  print(getMiddle("testing"));
-  print(getMiddle("middle"));
-  print(getMiddle("A"));
 }
