@@ -1,11 +1,13 @@
-int squareSum(List<int> numbers) {
-  int sum = 0;
-  for (int number in numbers) {
-    sum += number * number;
+int quadrant(int x, int y) {
+  if (x > 0 && y > 0) {
+    return 1;
+  } else if (x < 0 && y > 0) {
+    return 2;
+  } else if (x < 0 && y < 0) {
+    return 3;
+  } else if (x > 0 && y < 0) {
+    return 4;
   }
-  return sum;
-}
 
-void main() {
-  print(squareSum([1, 2, 2]));
+  return 0;
 }
